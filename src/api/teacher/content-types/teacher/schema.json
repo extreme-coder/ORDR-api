@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "singularName": "teacher",
+    "pluralName": "teachers",
+    "displayName": "Teacher",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "seat": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seat.seat",
+      "inversedBy": "teacher"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item.item"
+    },
+    "teacher_status": {
+      "type": "enumeration",
+      "enum": [
+        "PENDING",
+        "ARRIVED",
+        "LEFT"
+      ]
+    },
+    "food_status": {
+      "type": "enumeration",
+      "enum": [
+        "UNFINISHED",
+        "COOKED",
+        "SERVED"
+      ]
+    },
+    "drink_status": {
+      "type": "enumeration",
+      "enum": [
+        "UNORDERED",
+        "UNFINISHED",
+        "PREPARED",
+        "SERVED"
+      ]
+    }
+  }
+}
