@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teacher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "orders"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item.item"
+    },
+    "mods": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "UNFINISHED",
+        "PREPARED",
+        "SERVED"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "KITCHEN",
+        "BAR"
+      ]
+    }
+  }
+}

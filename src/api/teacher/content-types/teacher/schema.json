@@ -21,11 +21,6 @@
       "target": "api::seat.seat",
       "inversedBy": "teacher"
     },
-    "items": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::item.item"
-    },
     "teacher_status": {
       "type": "enumeration",
       "enum": [
@@ -34,22 +29,11 @@
         "LEFT"
       ]
     },
-    "food_status": {
-      "type": "enumeration",
-      "enum": [
-        "UNFINISHED",
-        "COOKED",
-        "SERVED"
-      ]
-    },
-    "drink_status": {
-      "type": "enumeration",
-      "enum": [
-        "UNORDERED",
-        "UNFINISHED",
-        "PREPARED",
-        "SERVED"
-      ]
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "teacher"
     }
   }
 }
