@@ -29,6 +29,7 @@
     "status": {
       "type": "enumeration",
       "enum": [
+        "PRE-EVENT",
         "UNFINISHED",
         "PREPARED",
         "SERVED"
