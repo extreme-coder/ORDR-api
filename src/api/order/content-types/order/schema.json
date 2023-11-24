@@ -33,7 +33,8 @@
         "UNFINISHED",
         "PREPARED",
         "SERVED"
-      ]
+      ],
+      "default": "PRE-EVENT"
     },
     "type": {
       "type": "enumeration",
