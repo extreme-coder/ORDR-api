@@ -18,11 +18,6 @@
       "target": "api::teacher.teacher",
       "inversedBy": "orders"
     },
-    "items": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::item.item"
-    },
     "mods": {
       "type": "text"
     },
@@ -42,6 +37,9 @@
         "KITCHEN",
         "BAR"
       ]
+    },
+    "items": {
+      "type": "string"
     }
   }
 }
