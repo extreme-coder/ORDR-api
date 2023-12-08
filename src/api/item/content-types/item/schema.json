@@ -26,6 +26,12 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "toppings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::topping.topping",
+      "mappedBy": "item"
     }
   }
 }
