@@ -32,6 +32,9 @@
       "relation": "oneToMany",
       "target": "api::topping.topping",
       "mappedBy": "item"
+    },
+    "multi_topping": {
+      "type": "boolean"
     }
   }
 }
