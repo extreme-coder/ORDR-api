@@ -29,19 +29,20 @@
     },
     "toppings": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::topping.topping",
-      "mappedBy": "item"
+      "mappedBy": "items"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "multi_topping": {
       "type": "boolean"

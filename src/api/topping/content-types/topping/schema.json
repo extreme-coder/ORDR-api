@@ -4,7 +4,8 @@
   "info": {
     "singularName": "topping",
     "pluralName": "toppings",
-    "displayName": "Topping"
+    "displayName": "Topping",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,9 +15,12 @@
     "name": {
       "type": "string"
     },
-    "item": {
+    "code": {
+      "type": "string"
+    },
+    "items": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::item.item",
       "inversedBy": "toppings"
     }
