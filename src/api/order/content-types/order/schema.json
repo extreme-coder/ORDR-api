@@ -39,7 +39,8 @@
       ]
     },
     "items": {
-      "type": "string"
+      "type": "string",
+      "default": ","
     }
   }
 }
