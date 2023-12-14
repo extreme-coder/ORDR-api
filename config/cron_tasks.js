@@ -4,7 +4,7 @@ module.exports = {
       filters: { status: "SERVED" }
     })
     servedOrders.forEach(async order => {
-      await strapi.entityService.delete("api::order.order", order.id)
+      //await strapi.entityService.delete("api::order.order", order.id)
     })
   }
 };
