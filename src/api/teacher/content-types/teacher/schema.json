@@ -27,7 +27,8 @@
         "PENDING",
         "ARRIVED",
         "LEFT"
-      ]
+      ],
+      "default": "PENDING"
     },
     "orders": {
       "type": "relation",
