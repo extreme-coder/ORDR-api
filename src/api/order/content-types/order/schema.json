@@ -41,6 +41,9 @@
     "items": {
       "type": "string",
       "default": ","
+    },
+    "active_since": {
+      "type": "datetime"
     }
   }
 }
