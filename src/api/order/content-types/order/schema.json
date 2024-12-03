@@ -38,12 +38,13 @@
         "BAR"
       ]
     },
-    "items": {
-      "type": "string",
-      "default": ","
-    },
     "active_since": {
       "type": "datetime"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-item.order-item"
     }
   }
 }
