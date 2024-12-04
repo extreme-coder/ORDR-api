@@ -45,6 +45,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order-item.order-item"
+    },
+    "time_cooked": {
+      "type": "datetime"
     }
   }
 }
