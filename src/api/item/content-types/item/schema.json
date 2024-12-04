@@ -46,6 +46,11 @@
     },
     "multi_topping": {
       "type": "boolean"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   }
 }
