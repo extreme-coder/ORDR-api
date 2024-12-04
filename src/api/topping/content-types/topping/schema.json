@@ -23,6 +23,11 @@
       "relation": "manyToMany",
       "target": "api::item.item",
       "inversedBy": "toppings"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   }
 }
