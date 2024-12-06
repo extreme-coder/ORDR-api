@@ -18,12 +18,6 @@
     "code": {
       "type": "string"
     },
-    "items": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::item.item",
-      "inversedBy": "toppings"
-    },
     "category": {
       "type": "relation",
       "relation": "oneToOne",

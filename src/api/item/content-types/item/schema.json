@@ -29,9 +29,8 @@
     },
     "toppings": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::topping.topping",
-      "mappedBy": "items"
+      "relation": "oneToMany",
+      "target": "api::topping.topping"
     },
     "Image": {
       "type": "media",
