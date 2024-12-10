@@ -39,6 +39,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
   },
 
   async update(ctx) {
+    const oldOrder = await strapi.entityService.findOne('api::order.order', ctx.params);
     const order = await super.update(ctx);
     if (ctx.request.body.data.order_items && ctx.request.body.data.order_items.length > 0) {
       const orderItems = await Promise.all(ctx.request.body.data.order_items.map(async (item) =>
@@ -56,7 +57,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
         }
       });
     }
-    if (order.data.attributes.status === "UNFINISHED") {
+    if (order.data.attributes.status === "UNFINISHED" && oldOrder.data.attributes.status === "PRE-EVENT") {
       const { id } = order.data;
       const datedOrder = await strapi.entityService.update('api::order.order', id, {
         data: {
