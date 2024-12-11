@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category"
+    "displayName": "Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,16 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "toppings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::topping.topping",
+      "mappedBy": "category"
+    },
+    "multi_select": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
