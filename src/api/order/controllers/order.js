@@ -39,11 +39,11 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
   },
 
   async update(ctx) {
-    const oldOrder = await strapi.entityService.findOne('api::order.order', ctx.params);
+    const oldOrder = await strapi.entityService.findOne('api::order.order', parseInt(ctx.params.toString().split('?')[0]));
     const order = await super.update(ctx);
     if (ctx.request.body.data.order_items && ctx.request.body.data.order_items.length > 0) {
       const orderItems = await Promise.all(ctx.request.body.data.order_items.map(async (item) =>
-        await strapi.entityService.create('api::order-item.order-item', { 
+        await strapi.entityService.create('api::order-item.order-item', {
           data: {
             item: item.item, 
             toppings: item.toppings,
