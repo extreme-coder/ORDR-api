@@ -45,6 +45,15 @@
     },
     "multi_topping": {
       "type": "boolean"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
     }
   }
 }
