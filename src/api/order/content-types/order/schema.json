@@ -27,7 +27,8 @@
         "PRE-EVENT",
         "UNFINISHED",
         "PREPARED",
-        "SERVED"
+        "SERVED",
+        "LEFT"
       ],
       "default": "PRE-EVENT"
     },
