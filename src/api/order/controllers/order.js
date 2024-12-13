@@ -57,7 +57,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
         }
       });
     }
-    if (order.data.attributes.status === "UNFINISHED" && oldOrder.data.attributes.status === "PRE-EVENT") {
+    if (order.data.attributes.status === "UNFINISHED" && oldOrder.status === "PRE-EVENT") {
       const { id } = order.data;
       const datedOrder = await strapi.entityService.update('api::order.order', id, {
         data: {
